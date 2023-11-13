@@ -1,8 +1,8 @@
 import Dummycard from "./Components/Dummycard"
 import Header from "./Components/Header"
 import Bg from "./Components/Bg"
-
-
+import Wuzdiz from "./Components/wuzzdizz"
+import ExploreBtn from "./Components/ExploreBtn"
 export default function Home() {
   return (
     <div className="Home">
@@ -16,19 +16,21 @@ export default function Home() {
 
         <div className='relative mt-20 w-3/4'>
           <div className='absolute left-0; h-44 '>
-            <Dummycard title="Ravioli Pasta" desc="It's amazingly mouth watering" />
+            <Dummycard color="lime" title="Ravioli Pasta" desc="It's amazingly mouth watering" />
           </div>
           <div className='absolute left-1/4 top-28 p-0 h-40 w-1/5'>
-            <Dummycard title="Pancakes" desc="Cakes don't need to be thicc"/>
+            <Dummycard img="pancake" color={"red"} title="Pancakes" desc="Cakes don't need to be thicc"/>
           </div>
           <div className='absolute right-0 p-0 h-44 w-80'>
-            <Dummycard title="Gulab Jamun" desc="Balls in syrup"/>
+            <Dummycard img="jamun" color="cyan" title="Gulab Jamun" desc="Balls in syrup"/>
           </div>
           <div className='absolute top-28 right-1/4 p-0 h-44 w-80'>
-            <Dummycard title="Biryani" desc="U not indian if u not biryani"/>
+            <Dummycard img="biryani" color="yello" title="Biryani" desc="U not indian if u not biryani"/>
           </div>
         </div>
       </div>
+      <Wuzdiz/>
+      <ExploreBtn/>
     </div>
   )
 }
