@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html>
+    <html className="w-screen h-screen overflow-x-hidden">
       <body>
         <AuthContextProvider>
           <Navbar />
