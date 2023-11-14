@@ -3,7 +3,7 @@ export default function Wuzdiz(){
         div: {
             position: 'absolute',
             width: '100%',
-            overflowX: 'hidden',
+            innerHeight: '500px',
         }
     };
     return(

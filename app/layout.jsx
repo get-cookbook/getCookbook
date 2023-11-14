@@ -12,6 +12,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html className="w-screen h-screen overflow-x-hidden">
+      <head>
+        <link rel="icon" href="icon.svg" type="image/x-icon"/>
+      </head>
       <body>
         <AuthContextProvider>{children}</AuthContextProvider>
       </body>
