@@ -1,0 +1,16 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="99.1353" y="52" width="94" height="15" rx="7.5" transform="rotate(54 99.1353 52)" fill="#339F00"/>
+<rect x="104" y="127.93" width="94" height="15" rx="7.5" transform="rotate(-56 104 127.93)" fill="#339F00"/>
+<rect x="136" y="52" width="94" height="15" rx="7.5" transform="rotate(90 136 52)" fill="#339F00"/>
+<g style="mix-blend-mode:overlay">
+<circle cx="128" cy="128" r="128" fill="#FFCB9A"/>
+</g>
+<mask id="mask0_1_17" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="60" y="91" width="135" height="146">
+<path d="M140.238 228.071C135.257 238.992 119.743 238.992 114.762 228.071L61.6235 111.559C57.3952 102.288 64.1715 91.75 74.3613 91.75L180.639 91.75C190.828 91.75 197.605 102.288 193.376 111.559L140.238 228.071Z" fill="#FF7A00"/>
+</mask>
+<g mask="url(#mask0_1_17)">
+<path d="M140.238 228.071C135.257 238.992 119.743 238.992 114.762 228.071L61.6235 111.559C57.3952 102.288 64.1715 91.75 74.3613 91.75L180.639 91.75C190.828 91.75 197.605 102.288 193.376 111.559L140.238 228.071Z" fill="#FF7A00"/>
+<rect x="50" y="128" width="78" height="18" rx="9" fill="#BA4300"/>
+<rect x="136" y="176" width="78" height="18" rx="9" fill="#BA4300"/>
+</g>
+</svg>
