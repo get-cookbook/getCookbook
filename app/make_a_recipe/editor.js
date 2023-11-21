@@ -32,6 +32,6 @@ export default function Editor({ data, onChange, holder }) {
   }, []);
 
   return (
-    <div id={holder} className="prose min-w-full rounded-lg m-3 bg-[#2B2B2B]" />
+    <div id={holder} className="prose min-w-full align-middle m-3 bg-[#2B2B2B]" />
   );
 }

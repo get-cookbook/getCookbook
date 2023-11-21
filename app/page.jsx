@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import Bg from "./Components/Bg";
 import Wuzdiz from "./Components/wuzzdizz";
 import ExploreBtn from "./Components/ExploreBtn";
+import EditorPage from "./make_a_recipe/page";
 export default function Home() {
   return (
     <div className="Home min-h-screen">
@@ -49,7 +50,7 @@ export default function Home() {
         </div>
       </div>
       <Wuzdiz />
-      <ExploreBtn />
+      <ExploreBtn /> 
     </div>
   );
 }
