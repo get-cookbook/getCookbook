@@ -3,9 +3,17 @@ const nextConfig = {
   rewrites: async () => [
     {
       source: "/api/:path*",
-      destination: "https://get-cookbook-backend.vercel.app/:path*",
+      destination: "http://localhost:6000/:path*",
     },
   ],
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+      },
+    ],
+  },
 };
 
-module.exports = nextConfig; 
+module.exports = nextConfig;

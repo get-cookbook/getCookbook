@@ -21,6 +21,7 @@
     "@editorjs/paragraph": "^2.10.0",
     "@editorjs/quote": "^2.5.0",
     "@editorjs/simple-image": "^1.5.1",
+    "editorjs-html": "^3.4.3",
     "firebase": "^10.5.2",
     "next": "14.0.0",
     "react": "^18",
