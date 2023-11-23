@@ -2,6 +2,7 @@
 import NameNLogo from "./NameNLogo";
 import React, { useState, useEffect } from "react";
 import { UserAuth } from "../context/AuthContext";
+import { useRouter } from "next/navigation";
 
 function NavButton({ text, goto, id }) {
     return (
@@ -19,6 +20,8 @@ function NavButton({ text, goto, id }) {
 export default function Header() {
     const { user, googleSignIn, logOut } = UserAuth();
     const [loading, setLoading] = useState(true);
+
+    const router = useRouter();
 
     const handleSignIn = async () => {
         let sign_in_button = document.querySelector("#login");
@@ -55,8 +58,16 @@ export default function Header() {
             <NameNLogo />
             <div className="flex align-middle justify-center p-5">
                 <NavButton text="ABOUT" />
-                <NavButton text="EXPLORE" />
+                <NavButton text="EXPLORE" goto={() => router.push("/explore")} />
 
+                {user ? (
+                    <NavButton
+                        text="PROFILE"
+                        goto={() => router.push("/profile")}
+                    ></NavButton>
+                ) : (
+                    ""
+                )}
                 {loading ? (
                     <div
                         className="relative mx-5 my-10 px-8 py-2 rounded-md bg-black text-white isolation-auto z-10 border-2 border-orange-500 hover:border-white
