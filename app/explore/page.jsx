@@ -2,7 +2,7 @@
 import RecipeCard from "../Components/RecipeCard";
 import { useRouter } from "next/navigation";
 import { UserAuth } from "../context/AuthContext";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Explore() {
     const bgStyles = {
@@ -34,12 +34,16 @@ export default function Explore() {
                 <RecipeCard key={recipe._id} recipe={recipe} />,
             );
         });
+
         setRecipeComponents(recipeComponents_local);
     }
 
-    fetchData().catch((error) => {
-        console.error("Error:", error);
-    });
+    useEffect(() => {
+        fetchData().catch((error) => {
+            console.error("Error:", error);
+        });
+    }, []);
+
     return (
         <div>
             <div style={{ ...bgStyles.div, top: "480px", zIndex: -1 }}>
@@ -62,7 +66,7 @@ export default function Explore() {
             </div>
             <div className="flex justify-center align-center">
                 <div className="grid grid-cols-3 justify-center items-center">
-                    {recipeComponents}
+                    {recipeComponents ? recipeComponents : <div>loading...</div>}
                 </div>
             </div>
         </div>

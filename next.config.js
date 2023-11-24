@@ -3,7 +3,7 @@ const nextConfig = {
   rewrites: async () => [
     {
       source: "/api/:path*",
-      destination: "http://localhost:6000/:path*",
+      destination: "https://get-cookbook-backend.vercel.app/:path*",
     },
   ],
   images: {

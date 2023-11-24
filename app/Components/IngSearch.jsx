@@ -116,36 +116,35 @@ export default function IngSearch({ addedIngredients, setAddedIngredients }) {
                 </button>
             </div>
 
-            
-
-            
-
             <div className="ingredients-list flex flex-col bg-transparent rounded-lg text-orange-800 {availableIngredients? 'p-2' : ''}">
                 {availableIngredients.map((ingredient) => (
                     <div className="">
-                    <div className="flex justify-left pl-10 align-middle my-2"
-                        key={ingredient.name}
-                        onClick={() => addIngredient(ingredient)}
-                    >
-                        <div className="rounded-full bg-orange-300 flex p-1">
-                            <div className="rounded-full h-10 w-10 bg-white  "></div>
-                            <p className="p-1 mr-1">{ingredient.name}</p>
+                        <div
+                            className="flex justify-left pl-10 align-middle my-2"
+                            key={ingredient.name}
+                            onClick={() => addIngredient(ingredient)}
+                        >
+                            <div className="rounded-full bg-orange-300 flex p-1">
+                                <div className="rounded-full h-10 w-10 bg-white  "></div>
+                                <p className="p-1 mr-1">{ingredient.name}</p>
+                            </div>
                         </div>
                     </div>
-                </div> 
                 ))}
-            <h1 className="text-4xl pl-5  mb-5">Ingredient List...</h1><br /><br />
-            <div className="addedItems flex flex-wrap">
-                {addedIngredients.map((ingredient) => (
-                    <div
-                        key={ingredient.name}
-                        className="bg-orange-300 text-orange-800 rounded-full p-1 flex align-middle m-1"
-                    >   
-                    <div className="rounded-full h-10 w-10 bg-white x "></div>
-                        <p className="p-1 mr-1">{ingredient.name}</p>
-                    </div>
-                ))}
-            </div>
+                <h1 className="text-4xl pl-5  mb-5">Ingredient List...</h1>
+                <br />
+                <br />
+                <div className="addedItems flex flex-wrap">
+                    {addedIngredients.map((ingredient) => (
+                        <div
+                            key={ingredient.name}
+                            className="bg-orange-300 text-orange-800 rounded-full p-1 flex align-middle m-1"
+                        >
+                            <div className="rounded-full h-10 w-10 bg-white x "></div>
+                            <p className="p-1 mr-1">{ingredient.name}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );

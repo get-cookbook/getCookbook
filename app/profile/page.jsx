@@ -4,7 +4,7 @@ import Header from "../Components/Header";
 import Pfp from "../Components/Pfp";
 import RecipeCard from "../Components/RecipeCard";
 import { UserAuth } from "../context/AuthContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Profile() {
     const { user, googleSignIn, logOut } = UserAuth();
@@ -38,9 +38,11 @@ export default function Profile() {
         setRecipeComponents(recipeComponents_local);
     }
 
-    fetchData().catch((error) => {
-        console.error("Error:", error);
-    });
+    useEffect(() => {
+        fetchData().catch((error) => {
+            console.error("Error:", error);
+        });
+    }, []);
 
     return (
         <div>
@@ -77,7 +79,9 @@ export default function Profile() {
                     <div className="">
                         <span className="text-4xl font-extrabold">Your Recipes...</span>
 
-                        <div className="grid grid-cols-2">{recipeComponents}</div>
+                        <div className="grid grid-cols-2">
+                            {recipeComponents ? recipeComponents : <div>loading...</div>}
+                        </div>
                     </div>
                 </div>
             </div>

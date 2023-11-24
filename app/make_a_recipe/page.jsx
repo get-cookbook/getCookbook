@@ -29,7 +29,7 @@ export default function EditorPage() {
       recipe: data,
     };
     try {
-      await fetch("/api/make_a_recipe", {
+      fetch("/api/make_a_recipe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(request),
@@ -65,7 +65,14 @@ export default function EditorPage() {
       </div>
       <Editor data={data} onChange={setData} holder="editorjs-container" />
       <div className="flex justify-center align-middle">
-        <button onClick={submit} className=" scale-105 px-10 py-2 m-5 border rounded-md border-lime-300 duration-100 hover:bg-lime-300 hover:border-white hover:border-2 hover:rounded-full hover:text-green-600"> <span className="text-lime-300 hover:text-green-600 ">+</span> Add recipe</button>
+        <button
+          onClick={submit}
+          className=" scale-105 px-10 py-2 m-5 border rounded-md border-lime-300 duration-100 hover:bg-lime-300 hover:border-white hover:border-2 hover:rounded-full hover:text-green-600"
+        >
+          {" "}
+          <span className="text-lime-300 hover:text-green-600 ">+</span> Add
+          recipe
+        </button>
       </div>
     </div>
   );
