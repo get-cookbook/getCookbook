@@ -43,7 +43,7 @@ export default function EditorPage() {
 
   return (
     <div className="bg-yellow-600 h-max pb-72">
-      <div className="header flex justify-between align-bottom pb-3 h-60 bg-transparent">
+      <div className="header flex justify-between align-bottom pb-3 bg-transparent">
         <IngSearch
           addedIngredients={addedIngredients}
           setAddedIngredients={setAddedIngredients}
@@ -64,7 +64,9 @@ export default function EditorPage() {
         </div>
       </div>
       <Editor data={data} onChange={setData} holder="editorjs-container" />
-      <button onClick={submit}>Submit</button>
+      <div className="flex justify-center align-middle">
+        <button onClick={submit} className=" scale-105 px-10 py-2 m-5 border rounded-md border-lime-300 duration-100 hover:bg-lime-300 hover:border-white hover:border-2 hover:rounded-full hover:text-green-600"> <span className="text-lime-300 hover:text-green-600 ">+</span> Add recipe</button>
+      </div>
     </div>
   );
 }
