@@ -1,4 +1,6 @@
 "use client";
+import Header from "@/app/Components/Header";
+import IngDisplay from "@/app/Components/IngDisplay";
 import { useState, useEffect } from "react";
 
 const edjsHtml = require("editorjs-html");
@@ -37,15 +39,29 @@ export default function recipe({ params }) {
   }, []);
 
   return (
-    <div className="prose max-w-full prose-invert" key={recipe_id}>
-      {editorHtml.map((item, index) => {
-        if (typeof item === "string") {
-          return (
-            <div dangerouslySetInnerHTML={{ __html: item }} key={index}></div>
-          );
-        }
-        return item;
-      })}
+    <div>
+      <Header />
+      <div className="max-w-full bg-orange-300 pb-10 px=0 flex justify-between">
+        
+        <div>
+          <div className="prose w-5/6 prose-invert p-10 bg-board  bg-blend-saturation rounded-3xl m-72 scale-150" key={recipe_id}>
+            <div className="rounded-3xl w-1/3 pl- h-10 bg-orange-300 align-middle justify-center"></div>
+            {editorHtml.map((item, index) => {
+              if (typeof item === "string") {
+                return (
+                  <div className="pl-10">
+                    <div className="">
+                      <div className="" dangerouslySetInnerHTML={{ __html: item }} key={index}></div>
+                    </div>
+                  </div>
+                );
+              }
+              return item;
+            })}
+          </div>
+        </div>
+        <IngDisplay array={[1,2,3]} />
+      </div>
     </div>
   );
 }
