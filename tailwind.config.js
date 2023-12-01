@@ -15,7 +15,7 @@ module.exports = {
         pancake: "url('./pancake.jpg')",
         biryani: "url('./biryani.jpg')",
         jamun: "url('./gulabJamun.jpeg')",
-        board: "url('./choppinBoard.jpg')"
+        board: "url('./board.jpg')"
       },
     },
   },
