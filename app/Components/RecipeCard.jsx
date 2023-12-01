@@ -9,7 +9,7 @@ export default function RecipeCard({ recipe }) {
             <div className="relative flex justify-between align-middle m-5 text-white rounded-2xl bg-red-500 max-w-md ">
                 <div className="m-5">
                     <div className="rounded-full overflow-hidden h-24 w-24 bg-white mx-1">
-                        <Image src={recipe.image} alt="Food" />
+                        <img src="/logo.svg" alt="Food" className="h-full w-full" />
                     </div>
                 </div>
 
@@ -24,7 +24,13 @@ export default function RecipeCard({ recipe }) {
                                 <div className="" key={ingredient.name}>
                                     <div className="flex justify-left pl-5 align-middle my-2">
                                         <div className="rounded-full bg-orange-300 flex p-1">
-                                            <div className="rounded-full h-10 w-10 bg-white  "></div>
+                                            <div className="rounded-full h-10 w-10 bg-black p-2">
+                                                <img
+                                                    src={ingredient.image}
+                                                    alt={ingredient.name}
+                                                    className="w-full h-full"
+                                                />
+                                            </div>
                                             <p className="p-1 mr-1">{ingredient.name}</p>
                                         </div>
                                     </div>

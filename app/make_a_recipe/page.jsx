@@ -53,13 +53,13 @@ export default function EditorPage() {
             type="text"
             id="title"
             placeholder="Title"
-            className="bg-transparent text-white px-3 py-1 m-3 focus:outline-none text-6xl border-b-2 border-dashed border-white font-bold"
+            className="bg-transparent text-white px-3 py-1 m-3 focus:outline-none text-6xl border-b-2 border-dashed border-white font-bold placeholder:text-yellow-700"
           />
           <input
             type="text"
             id="description"
             placeholder="Description"
-            className="bg-transparent text-white px-3 py-1 m-3 focus:outline-none border-b-2 border-dashed border-white"
+            className="bg-transparent text-white px-3 py-1 m-3 focus:outline-none border-b-2 border-dashed border-white placeholder:text-yellow-700"
           />
         </div>
       </div>
