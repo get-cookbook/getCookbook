@@ -18,7 +18,7 @@ export default function Profile() {
 
     async function fetchData() {
         const response = await fetch(
-            `/api/get_recipes_per_user?user_id${user.uid}`,
+            "/api/get_recipes_per_user?user_id=" + user.uid,
             {
                 method: "get",
             },
@@ -30,6 +30,7 @@ export default function Profile() {
 
         const user_recipes = await response.json();
         let recipeComponents_local = [];
+        console.log(user_recipes);
         user_recipes.map((recipe) => {
             recipeComponents_local.push(
                 <RecipeCard key={recipe._id} recipe={recipe} />,
