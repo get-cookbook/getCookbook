@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 const edjsHtml = require("editorjs-html");
 
-export default function recipe({ params }) {
+export default function Recipe({ params }) {
   const [editorHtml, setEditorHtml] = useState([]);
   const [recipeData, setRecipeData] = useState({});
   const recipe_id = params.slug;

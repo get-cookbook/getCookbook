@@ -118,7 +118,7 @@ export default function IngSearch({ addedIngredients, setAddedIngredients }) {
 
             <div className="ingredients-list flex flex-col bg-transparent rounded-lg text-orange-800 {availableIngredients? 'p-2' : ''}">
                 {availableIngredients.map((ingredient) => (
-                    <div className="">
+                    <div className="" key={ingredient.name}>
                         <div
                             className="flex justify-left pl-10 align-middle my-2"
                             key={ingredient.name}
