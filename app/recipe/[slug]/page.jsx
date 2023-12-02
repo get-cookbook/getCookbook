@@ -10,10 +10,6 @@ export default function Recipe({ params }) {
   const [recipeData, setRecipeData] = useState({});
   const recipe_id = params.slug;
 
-  if (!recipe_id) {
-    return <div>404</div>;
-  }
-
   const edjsParser = edjsHtml();
   const htmlify = edjsParser.parse;
   async function fetchData() {
@@ -57,7 +53,7 @@ export default function Recipe({ params }) {
             {editorHtml.map((item, index) => {
               if (typeof item === "string") {
                 return (
-                  <div className="pl-10">
+                  <div className="pl-10" key={index}>
                     <div className="">
                       <div
                         className=""
@@ -68,7 +64,7 @@ export default function Recipe({ params }) {
                   </div>
                 );
               }
-              return item;
+              return "";
             })}
           </div>
         </div>
